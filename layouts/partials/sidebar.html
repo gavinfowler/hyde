@@ -10,8 +10,8 @@
     <nav>
       <ul class="sidebar-nav">
         <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
-        {{ range .Site.Menus.main -}}
-          <li><a href="{{.URL}}"> {{ .Name }} </a></li>
+        {{ range .Site.Params.main -}}
+        <li><a href="{{ .URL }}" {{if .Newpage}}target="_blank"{{end}} > {{ .Name }}</a></li>
         {{- end }}
       </ul>
     </nav>
